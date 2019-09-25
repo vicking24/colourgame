@@ -13,6 +13,11 @@ int c;
 int split= int (random(0, 1));
 int size=50;
 
+ArrayList <PImage> gif;
+int n=0;
+int i=0;
+String zero;
+
 
 final int intro=0;
 final int game=1;
@@ -32,6 +37,22 @@ void setup () {
   point=0;
   highscore=0;
   
+  gif= new ArrayList <PImage> (120); // constructing a list, number is the amount of frame of the gif
+
+  while (i<=119) {
+    if (i<10) {
+      zero= "00";
+    } 
+    else if (i>9 &&i<100) {
+      zero= "0";
+    }else {
+      zero="";
+    }
+    PImage temp=loadImage ("frame_" +zero +i+ "_delay-0.03s.gif");
+    temp.resize (800, 800);
+    gif.add (temp);
+    i=i+1;
+  }
  
 }
 

@@ -1,6 +1,10 @@
 void intro () {
 
-  background (0, 255, 0);
+   image (gif.get(n), 0, 0);
+  n=n+1;
+  if (n>119) {
+    n=0;
+  }
   textSize (90);
   fill (0);
   text ("COLOUR SWITCH", width/2, height/2);
@@ -20,7 +24,16 @@ void intro () {
   fill (255);
   textSize (50);
   text ("START", 400, 650);
+  
+  
+  
 }
+
+
+ 
+ 
+
+
 
 
 void introR () {

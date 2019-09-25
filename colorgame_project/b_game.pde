@@ -19,7 +19,7 @@ void game () {
   textSize (size);
   text (words [rng], width/2, height/2);
   
-  size=size+1;
+  size=size+2;
 
   if (size>200) {
     if (highscore==point) {
@@ -39,8 +39,23 @@ void gameR () {
 
   if (mouseX<400 && rng==c) {
     point=point+1;
+    
     rng = int (random (0, 5));
+      c= int (random (0, 5));
+      
+    split= int (random(0, 2));
+    
+    if (split==0) {
+      while (rng==c) {
+      rng = int (random (0, 5));
+      c= int (random (0, 5));
+      }
+    } else {
+      while (rng!=c) {
+     rng = int (random (0, 5));
     c= int (random (0, 5));
+      }
+    }
     
     size= 50;
     if (point>highscore) {
@@ -49,9 +64,22 @@ void gameR () {
   } else if (mouseX>400 && rng!=c) {
     point=point+1;
     
-   
+    rng = int (random (0, 5));
+      c= int (random (0, 5));
+      
+    split= int (random(0, 2));
+    
+     if (split==0) {
+      while (rng==c) {
       rng = int (random (0, 5));
       c= int (random (0, 5));
+      }
+    } else {
+      while (rng!=c) {
+     rng = int (random (0, 5));
+    c= int (random (0, 5));
+      }
+    }
    
     size=50;
     if (point>highscore) {
