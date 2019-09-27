@@ -7,6 +7,8 @@ text ("GAMEOVER", 400, 400);
 textSize (50);
 text ("SCORE:"+point, 400, 700);
 
+text ("highscore:"+highscore, 600, 70);
+
 
 
  if (mouseX>300 && mouseX <500 && mouseY >550 && mouseY <610) {
